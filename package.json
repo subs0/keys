@@ -23,6 +23,9 @@
     "keys",
     "constants"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "prettier": {
     "singleQuote": false,
     "printWidth": 100,
