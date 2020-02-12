@@ -26,6 +26,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@thi.ng/atom": "latest",
+    "@thi.ng/rstream": "latest"
+  },
+  "devDependencies": {
+    "@thi.ng/atom": "latest",
+    "@thi.ng/rstream": "latest"
+  },
   "prettier": {
     "singleQuote": false,
     "printWidth": 100,
