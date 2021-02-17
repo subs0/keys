@@ -1,5 +1,5 @@
 import { ISubscribable } from "@thi.ng/rstream";
-import { IAtom } from "@thi.ng/atom";
+import { IAtom } from "@thi.ng/atom/api";
 import * as C from "./constants";
 export interface ParsedURL {
     [C.URL_FULL]: string;
@@ -18,7 +18,7 @@ export interface ICommand {
     [C.CMD_ARGS]: any;
     [C.CMD_SUB$]?: string;
     [C.CMD_RESO]?: (acc: {}, res: {}) => any;
-    [C.CMD_ERRO]?: (acc: {}, err: Error) => any;
+    [C.CMD_ERRO]?: (acc: {}, err: Error, out$: ISubscribable<any>) => any;
     [C.CMD_WORK]?: (args: any) => any;
     [C.CMD_SRC$]?: ISubscribable<any>;
 }
@@ -42,12 +42,32 @@ export interface DefaultDraft {
     [C.$$_LOAD]: boolean;
     [C.$$_VIEW]: Function;
     [C.$$_ROOT]: HTMLElement;
-    [C.$$_CMDS]: [];
 }
-export declare type Router = (path: string) => object;
+export interface HeadData {
+    [C.HD_TITL]?: string;
+    [C.OG_DESC]?: string;
+    [C.OG_IMGU]?: string;
+    [C.OG_IMGW]?: string | Number;
+    [C.OG_IMGH]?: string | Number;
+    [C.HD_ICON]?: string;
+    [C.OG_TYPE]?: string;
+}
+export interface RouterHeadBodyData {
+    [C.DOM_HEAD]: HeadData;
+    [C.DOM_BODY]: any;
+}
+export interface RouterOutput {
+    [C.URL_DATA]: RouterHeadBodyData | any;
+    [C.URL_PAGE]: any;
+}
+export declare type Router = (path: string) => RouterOutput;
+export interface RouterInput {
+    [C.URL_FULL]: string;
+    [C.DOM_NODE]?: HTMLElement | Window;
+}
 export interface RouterCFG {
-    [C.ROUTER_PREP]: Command | Task;
-    [C.ROUTER_PRFX]: string;
-    [C.ROUTER_POST]: Command | Task;
+    [C.RTR_PREP]: Command | Task;
+    [C.RTR_PRFX]: string;
+    [C.RTR_POST]: Command | Task;
     [C.CFG_RUTR]: Router;
 }

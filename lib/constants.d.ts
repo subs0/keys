@@ -1,13 +1,13 @@
-export declare const URL_FULL = "URL";
-export declare const URL_PATH = "URL_path";
-export declare const URL_DATA = "URL_data";
-export declare const URL_DOMN = "URL_domain";
-export declare const URL_SUBD = "URL_subdomain";
-export declare const URL_QERY = "URL_query";
-export declare const URL_HASH = "URL_hash";
-export declare const URL_PAGE = "URL_page";
-export declare const URL_PRSE = "parse";
-export declare const URL_NPRS = "unparse";
+export declare const URL_FULL = "URL_FULL";
+export declare const URL_PATH = "URL_PATH";
+export declare const URL_DATA = "URL_DATA";
+export declare const URL_DOMN = "URL_DOMN";
+export declare const URL_SUBD = "URL_SUBD";
+export declare const URL_QERY = "URL_QERY";
+export declare const URL_HASH = "URL_HASH";
+export declare const URL_PAGE = "URL_PAGE";
+export declare const URL_PRSE = "unfurl";
+export declare const URL_NPRS = "urlify";
 export declare const URL: {
     FULL: string;
     PATH: string;
@@ -20,16 +20,24 @@ export declare const URL: {
     PRSE: string;
     NPRS: string;
 };
-export declare const DOM_NODE = "NODE";
-export declare const DOM_BODY = "BODY";
-export declare const DOM_HEAD = "HEAD";
+export declare const DOM_NODE = "DOM_NODE";
+export declare const DOM_BODY = "DOM_BODY";
+export declare const DOM_HEAD = "DOM_HEAD";
 export declare const DOM: {
     NODE: string;
     BODY: string;
     HEAD: string;
 };
-export declare const STATE_PATH = "PATH";
-export declare const STATE_DATA = "DATA";
+export declare const HD_TITL = "HD_TITL";
+export declare const HD_ICON = "HD_ICON";
+export declare const HD_META = "HD_META";
+export declare const OG_DESC = "OG_DESC";
+export declare const OG_IMGU = "OG_IMGU";
+export declare const OG_IMGW = "OG_IMGW";
+export declare const OG_IMGH = "OG_IMGH";
+export declare const OG_TYPE = "OG_TYPE";
+export declare const SET_PATH = "SET_PATH";
+export declare const SET_DATA = "SET_DATA";
 export declare const STATE: {
     PATH: string;
     DATA: string;
@@ -49,13 +57,13 @@ export declare const CMD: {
     SRC$: string;
 };
 export declare const CFG_RUN$ = "run";
-export declare const CFG_ROOT = "root";
-export declare const CFG_VIEW = "view";
-export declare const CFG_KICK = "kick";
-export declare const CFG_STOR = "store";
-export declare const CFG_DRFT = "draft";
-export declare const CFG_LOG$ = "trace";
-export declare const CFG_RUTR = "router";
+export declare const CFG_STOR = "state";
+export declare const CFG_ROOT = "CFG_ROOT";
+export declare const CFG_VIEW = "CFG_VIEW";
+export declare const CFG_KICK = "CFG_KICK";
+export declare const CFG_DRFT = "CFG_DRFT";
+export declare const CFG_LOG$ = "CFG_LOG$";
+export declare const CFG_RUTR = "CFG_RUTR";
 export declare const CFG: {
     RUN$: string;
     STOR: string;
@@ -66,25 +74,23 @@ export declare const CFG: {
     RUTR: string;
     KICK: string;
 };
-export declare const ROUTER_PREP = "prep";
-export declare const ROUTER_POST = "post";
-export declare const ROUTER_PRFX = "prefix";
-export declare const ROUTER: {
+export declare const RTR_PREP = "RTR_PREP";
+export declare const RTR_POST = "RTR_POST";
+export declare const RTR_PRFX = "RTR_PRFX";
+export declare const RTR: {
     PREP: string;
     POST: string;
     PRFX: string;
     RUTR: string;
 };
-export declare const $$_PATH = "_ROUTE_PATH";
-export declare const $$_LOAD = "_ROUTE_LOADING";
-export declare const $$_VIEW = "_PAGE_TEMPLATE";
-export declare const $$_ROOT = "_ROOT";
-export declare const $$_CMDS = "_COMMANDS";
+export declare const $$_PATH = "$$_PATH";
+export declare const $$_LOAD = "$$_LOAD";
+export declare const $$_VIEW = "$$_VIEW";
+export declare const $$_ROOT = "$$_ROOT";
 export declare const $$: Object;
 export declare const $$_DEFAULT: {
-    _ROUTE_PATH: any[];
-    [$$_LOAD]: boolean;
-    _PAGE_TEMPLATE: any;
-    [$$_ROOT]: HTMLElement;
-    _COMMANDS: {};
+    $$_PATH: any[];
+    $$_LOAD: boolean;
+    $$_VIEW: any;
+    $$_ROOT: any;
 };

@@ -2,54 +2,69 @@
  * @module keys
  */
 
-export const URL_FULL = "URL"
-export const URL_PATH = "URL_path"
-export const URL_DATA = "URL_data"
-export const URL_DOMN = "URL_domain"
-export const URL_SUBD = "URL_subdomain"
-export const URL_QERY = "URL_query"
-export const URL_HASH = "URL_hash"
-export const URL_PAGE = "URL_page"
-export const URL_PRSE = "parse"
-export const URL_NPRS = "unparse"
+export const URL_FULL = "URL_FULL"
+export const URL_PATH = "URL_PATH"
+export const URL_DATA = "URL_DATA"
+export const URL_DOMN = "URL_DOMN"
+export const URL_SUBD = "URL_SUBD"
+export const URL_QERY = "URL_QERY"
+export const URL_HASH = "URL_HASH"
+export const URL_PAGE = "URL_PAGE"
 
-// public
+// DON'T CHANGE THESE 💢
+export const URL_PRSE = "unfurl"
+export const URL_NPRS = "urlify"
+
+/**
+ * Object Keys for a Parsed URL using `parse` from @-0/utils
+ */
 export const URL = {
-  FULL: URL_FULL,
-  PATH: URL_PATH,
-  DATA: URL_DATA,
-  DOMN: URL_DOMN,
-  SUBD: URL_SUBD,
-  QERY: URL_QERY,
-  HASH: URL_HASH,
-  PAGE: URL_PAGE,
-  PRSE: URL_PRSE,
-  NPRS: URL_NPRS
+    FULL: URL_FULL,
+    PATH: URL_PATH,
+    DATA: URL_DATA,
+    DOMN: URL_DOMN,
+    SUBD: URL_SUBD,
+    QERY: URL_QERY,
+    HASH: URL_HASH,
+    PAGE: URL_PAGE,
+    PRSE: URL_PRSE,
+    NPRS: URL_NPRS
 }
 
 // userland router metadata constants
-export const DOM_NODE = "NODE"
-export const DOM_BODY = "BODY"
-export const DOM_HEAD = "HEAD"
+export const DOM_NODE = "DOM_NODE"
+export const DOM_BODY = "DOM_BODY"
+export const DOM_HEAD = "DOM_HEAD"
 
 // public
 export const DOM = {
-  NODE: DOM_NODE,
-  BODY: DOM_BODY,
-  HEAD: DOM_HEAD
+    NODE: DOM_NODE,
+    BODY: DOM_BODY,
+    HEAD: DOM_HEAD
 }
 
+// document head selector shortcuts
+export const HD_TITL = "HD_TITL"
+export const HD_ICON = "HD_ICON"
+export const HD_META = "HD_META"
+export const OG_DESC = "OG_DESC"
+export const OG_IMGU = "OG_IMGU"
+export const OG_IMGW = "OG_IMGW"
+export const OG_IMGH = "OG_IMGH"
+export const OG_TYPE = "OG_TYPE"
+
 // set$$tate constants
-export const STATE_PATH = "PATH"
-export const STATE_DATA = "DATA"
+export const SET_PATH = "SET_PATH"
+export const SET_DATA = "SET_DATA"
 
 // public
 export const STATE = {
-  PATH: STATE_PATH,
-  DATA: STATE_DATA
+    PATH: SET_PATH,
+    DATA: SET_DATA
 }
 
-// state setting Command constants
+// Primary Userland Command Properties
+// PRIORITY: DON'T CHANGE THESE 💢
 export const CMD_SUB$ = "sub$"
 export const CMD_ARGS = "args"
 export const CMD_RESO = "reso"
@@ -59,70 +74,74 @@ export const CMD_SRC$ = "src$"
 
 // public
 export const CMD = {
-  SUB$: CMD_SUB$,
-  ARGS: CMD_ARGS,
-  RESO: CMD_RESO,
-  ERRO: CMD_ERRO,
-  WORK: CMD_WORK,
-  SRC$: CMD_SRC$
+    SUB$: CMD_SUB$,
+    ARGS: CMD_ARGS,
+    RESO: CMD_RESO,
+    ERRO: CMD_ERRO,
+    WORK: CMD_WORK,
+    SRC$: CMD_SRC$
 }
 
-// boot config constants
+// Userland dispatching
+// DON'T CHANGE THESE 💢
 export const CFG_RUN$ = "run"
-export const CFG_ROOT = "root"
-export const CFG_VIEW = "view"
-export const CFG_KICK = "kick"
-export const CFG_STOR = "store"
-export const CFG_DRFT = "draft"
-export const CFG_LOG$ = "trace"
-export const CFG_RUTR = "router"
+export const CFG_STOR = "state"
+
+// boot config constants
+export const CFG_ROOT = "CFG_ROOT"
+export const CFG_VIEW = "CFG_VIEW"
+export const CFG_KICK = "CFG_KICK"
+export const CFG_DRFT = "CFG_DRFT"
+export const CFG_LOG$ = "CFG_LOG$"
+export const CFG_RUTR = "CFG_RUTR"
 
 // public
 export const CFG = {
-  RUN$: CFG_RUN$,
-  STOR: CFG_STOR,
-  ROOT: CFG_ROOT,
-  VIEW: CFG_VIEW,
-  DRFT: CFG_DRFT,
-  LOG$: CFG_LOG$,
-  RUTR: CFG_RUTR,
-  KICK: CFG_KICK
+    RUN$: CFG_RUN$,
+    STOR: CFG_STOR,
+    ROOT: CFG_ROOT,
+    VIEW: CFG_VIEW,
+    DRFT: CFG_DRFT,
+    LOG$: CFG_LOG$,
+    RUTR: CFG_RUTR,
+    KICK: CFG_KICK
 }
 
 // ROUTER
-export const ROUTER_PREP = "prep"
-export const ROUTER_POST = "post"
-export const ROUTER_PRFX = "prefix"
+export const RTR_PREP = "RTR_PREP"
+export const RTR_POST = "RTR_POST"
+export const RTR_PRFX = "RTR_PRFX"
 
 // public
-export const ROUTER = {
-  PREP: ROUTER_PREP,
-  POST: ROUTER_POST,
-  PRFX: ROUTER_PRFX,
-  RUTR: CFG_RUTR
+export const RTR = {
+    PREP: RTR_PREP,
+    POST: RTR_POST,
+    PRFX: RTR_PRFX,
+    RUTR: CFG_RUTR
 }
 
 // Global state keys/constants
-export const $$_PATH = "_ROUTE_PATH"
-export const $$_LOAD = "_ROUTE_LOADING"
-export const $$_VIEW = "_PAGE_TEMPLATE"
-export const $$_ROOT = "_ROOT"
-export const $$_CMDS = "_COMMANDS"
+
+export const $$_PATH = "$$_PATH"
+export const $$_LOAD = "$$_LOAD"
+export const $$_VIEW = "$$_VIEW"
+export const $$_ROOT = "$$_ROOT"
+//export const $$_CMDS = "$$_CMDS"
 
 // public
 export const $$: Object = {
-  PATH: $$_PATH,
-  LOAD: $$_LOAD,
-  VIEW: $$_VIEW,
-  ROOT: $$_ROOT,
-  CMDS: $$_CMDS
+    PATH: $$_PATH,
+    LOAD: $$_LOAD,
+    VIEW: $$_VIEW,
+    ROOT: $$_ROOT
+    //CMDS: $$_CMDS
 }
 
 // home page / defaults to empty path
 export const $$_DEFAULT = {
-  [$$_PATH]: [],
-  [$$_LOAD]: true,
-  [$$_VIEW]: null,
-  [$$_ROOT]: document.body,
-  [$$_CMDS]: {}
+    [$$_PATH]: [],
+    [$$_LOAD]: true,
+    [$$_VIEW]: null,
+    [$$_ROOT]: null
+    //[$$_CMDS]: {}
 }
